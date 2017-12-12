@@ -1,0 +1,15 @@
+.gitignore
+.git
+
+*Dockerfile*
+*docker-compose*
+.dockerignore
+
+.vscode/
+dev/
+node_modules/
+
+*.env
+
+.eslintrc.json
+jsconfig.json

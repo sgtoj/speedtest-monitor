@@ -1,0 +1,12 @@
+# node
+node_modules
+tmp
+*.map
+*.log
+
+# typescript
+dist
+
+# secrets
+config.yml
+config.yaml

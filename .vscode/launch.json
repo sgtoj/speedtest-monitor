@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "protocol": "inspector",
+            "name": "Local Debug",
+            "program": "${workspaceRoot}/index.js",
+            "sourceMaps": true,
+            "smartStep": true,
+            "showAsyncStacks": true
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "protocol": "inspector",
+            "name": "Remote Debug",
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "/opt/app",
+            "restart": true,
+            "sourceMaps": true,
+            "smartStep": true,
+            "showAsyncStacks": true,
+            "address": "127.0.0.1",
+            "port": 9229
+        }
+    ]
+}

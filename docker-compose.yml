@@ -1,0 +1,22 @@
+version: "3.0"
+services:
+  monitor:
+    container_name: speedtest-monitor
+    image: local/speedtest-monitor
+    build:
+      args:
+       - NODE_ENV=development
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/opt/app
+      - notused:/opt/app/node_modules  # see volumes comment at bottom
+    ports:
+      - 9229:9229
+    command: nodemon --inspect=0.0.0.0:9229 --legacy-watch --nolazy -w index.js -w src index.js
+
+
+# used to prevent mounting of host's node_module; this forces node to use the
+# node_module at /opt/node_module rather than /opt/app/node_module
+volumes:
+    notused:

@@ -1,0 +1,10 @@
+# base template for pushing stats to log
+
+logging:
+  level: info
+monitor:
+  delay: 300
+publishers:
+- type: simple
+  options:
+    format: string
